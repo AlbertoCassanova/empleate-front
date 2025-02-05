@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import LoginForm from '../components/LoginForm'
 
 const AuthView = () => {
+    document.title = "Iniciar sesión";
     const [loadingView, setLoadingView] = useState<boolean>(false);
     useEffect(() => {
         if (localStorage.getItem("usuario")) {

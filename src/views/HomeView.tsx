@@ -1,4 +1,5 @@
 const HomeView = () => {
+    document.title = "Empleate";
     const Logout = () => {
         localStorage.removeItem("usuario");
         window.location.href = "/"
