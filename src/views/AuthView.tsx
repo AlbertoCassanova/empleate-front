@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react'
-import LoginForm from '../components/LoginForm'
+// React
+import { useEffect, useState } from 'react';
 
-const AuthView = () => {
+// Components
+import LoginForm from '../components/auth/LoginForm';
+
+const AuthView = () : JSX.Element => {
     document.title = "Iniciar sesión";
+
     const [loadingView, setLoadingView] = useState<boolean>(false);
     useEffect(() => {
         if (localStorage.getItem("usuario")) {
@@ -13,7 +17,7 @@ const AuthView = () => {
         }
     })
     return !loadingView ? (<></>):(
-        <div>
+        <div className='flex w-full h-full'>
             <LoginForm />
         </div>
     )

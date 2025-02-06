@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@layer components {
+    .auth-input {
+        @apply my-1 rounded-md bg-white;
+    }
+}

@@ -1,7 +1,11 @@
-const HomeView = () => {
+const HomeView = () : JSX.Element => {
     document.title = "Empleate";
-    const Logout = () => {
-        localStorage.removeItem("usuario");
+
+    /**
+     * Función usada para cerrar sesión
+     */
+    const Logout = () : void => {
+        localStorage.removeItem("token");
         window.location.href = "/"
     }
     return (

@@ -1,11 +1,12 @@
+// React
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+//import './index.css'
 import App from './App.tsx'
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { ApolloClient, ApolloProvider, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
 
-const client = new ApolloClient({
-  uri: "http://94.131.97.245:4000",
+const client : ApolloClient<NormalizedCacheObject> = new ApolloClient({
+  uri: "http://94.131.97.245:4000/graphql",
   cache: new InMemoryCache()
 });
 
