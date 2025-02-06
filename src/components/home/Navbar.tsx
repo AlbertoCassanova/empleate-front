@@ -1,6 +1,6 @@
 const Navbar = () : JSX.Element => {
     return (
-        <div className="bg-blue-500 p-2 shadow-md">
+        <div className="bg-blue-500 p-2 shadow-md visible md:hidden">
             <input 
                 type="search"
                 name="busqueda"

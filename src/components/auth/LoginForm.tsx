@@ -82,11 +82,11 @@ const LoginForm = (): JSX.Element => {
     }
     return (
         <div className='flex items-center w-full h-full justify-center'>
-            <form className='flex flex-col bg-blue-500 p-4 rounded-lg shadow-xl'>
+            <form className='flex flex-col bg-blue-500 md:p-4 p-6 rounded-lg shadow-xl'>
                 {
                     !signupView ? (
                         <>
-                            <h2 className='text-center text-white text-2xl'>Iniciar sesión</h2>
+                            <h2 className='text-center text-white md:text-2xl text-3xl font-medium'>Iniciar sesión</h2>
                             <input
                                 className='auth-input'
                                 autoComplete="off"
@@ -101,10 +101,19 @@ const LoginForm = (): JSX.Element => {
                                 placeholder='Contraseña'
                                 onChange={(e) => setInputPassword(e.target.value)}
                             />
-                            <span className='self-center'>
-                                <button className='bg-indigo-800 text-white p-1 rounded-md' type='button' onClick={handleLogin}>Entrar</button>
+                            <span className='self-center py-2'>
+                                <button 
+                                    className='bg-indigo-800 text-2xl p-2 text-white md:p-1 rounded-md'
+                                    type='button'
+                                    onClick={handleLogin}
+                                >
+                                    Entrar
+                                </button>
                             </span>
-                            <span>¿No estas registrado?
+                            <span 
+                                className='text-2xl md:text-lg text-center'
+                            >
+                                ¿No estas registrado?
                                 <a
                                     className='cursor-pointer hover:underline'
                                     onClick={() => {
@@ -118,7 +127,7 @@ const LoginForm = (): JSX.Element => {
                         </>
                     ) : (
                         <>
-                            <h2 className='text-center text-white text-2xl'>Registrarse</h2>
+                            <h2 className='text-center text-white md:text-2xl text-3xl font-medium'>Registrarse</h2>
                             <input
                                 className='auth-input'
                                 autoComplete='off'
@@ -156,16 +165,19 @@ const LoginForm = (): JSX.Element => {
                                 placeholder='Confirmar contraseña'
                                 onChange={(e) => setVerifyPassword(e.target.value)}
                             />
-                            <span className='self-center'>
+                            <span className='self-center py-2'>
                                 <button
                                     onClick={handleSignUp}
-                                    className='bg-indigo-800 text-white p-1 rounded-md'
+                                    className='bg-indigo-800 text-2xl p-2 text-white md:p-1 rounded-md'
                                     type='button'
                                 >
                                     Registrarse
                                 </button>
                             </span>
-                            <span>¿Ya estas registrado?
+                            <span
+                                className='text-2xl md:text-lg text-center'
+                            >
+                                ¿Ya estas registrado?
                                 <a
                                     className='cursor-pointer hover:underline'
                                     onClick={() => {

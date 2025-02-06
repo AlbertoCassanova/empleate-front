@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+    --breakpoint-md: 28rem;
+
+    --color-dark-purple: #081A51;
+    --color-light-white: rgba(255,255,255,0.18);
+}
+
+li::marker  {
+    content: "" !important;
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -7,6 +18,6 @@ html {
 
 @layer components {
     .auth-input {
-        @apply my-1 rounded-md bg-white;
+        @apply my-1 rounded-md bg-white p-2 w-80 text-2xl md:text-lg;
     }
 }

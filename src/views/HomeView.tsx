@@ -1,16 +1,8 @@
-const HomeView = () : JSX.Element => {
-    document.title = "Empleate";
 
-    /**
-     * Función usada para cerrar sesión
-     */
-    const Logout = () : void => {
-        localStorage.removeItem("token");
-        window.location.href = "/"
-    }
+const HomeView = (): JSX.Element => {
+    document.title = "Empleate";
     return (
         <div>
-            <button onClick={Logout}>Cerrar sesión</button>
         </div>
     )
 }
