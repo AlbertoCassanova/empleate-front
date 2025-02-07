@@ -16,8 +16,12 @@ html {
     height: 100%;
 }
 
+.w-available {
+    width: -webkit-fill-available;
+}
+
 @layer components {
     .auth-input {
-        @apply my-1 rounded-md bg-white p-2 w-80 text-2xl md:text-lg;
+        @apply w-full px-8 py-4 my-1 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white;
     }
 }

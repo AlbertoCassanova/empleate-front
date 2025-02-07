@@ -4,7 +4,7 @@ const MapContainer = () => {
     return (
         <div>
             <Map
-                className="w-screen h-screen"
+                className="h-screen w-screen md:w-[80vw]"
                 defaultZoom={13}
                 defaultCenter={{ lat: -12.152010575607147, lng: -77.01300775041199 }}
                 onCameraChanged={(ev: MapCameraChangedEvent) =>
