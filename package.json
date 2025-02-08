@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@apollo/client": "^3.12.9",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.3",
     "@reduxjs/toolkit": "^2.5.1",
     "@tailwindcss/vite": "^4.0.3",
     "@vis.gl/react-google-maps": "^1.5.1",

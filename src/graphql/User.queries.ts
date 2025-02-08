@@ -16,6 +16,8 @@ export const GET_USER_INFO = gql`
             nombre
             apellido
             email
+            sexo
+            editado
         }
     }
 `
@@ -25,6 +27,15 @@ export const CREATE_USER = gql`
         createUser(nombre: $nombre, apellido: $apellido, email: $email, password: $password) {
             code
             msg
+        }
+    }
+`
+
+export const UPDATE_USER = gql`
+    mutation UpdateUser($newData: updateUserData, $token: String) {
+        updateUser(newData: $newData, token: $token) {
+            msg
+            code
         }
     }
 `

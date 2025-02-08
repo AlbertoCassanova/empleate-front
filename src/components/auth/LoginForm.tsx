@@ -18,7 +18,7 @@ const LoginForm = (): JSX.Element => {
     const [textContainerMessage, setTextContainerMessage] = useState<string>("");
 
     // Graphql queries
-    const [getUser, { error }] = useLazyQuery<any, OperationVariables>(LOGIN_USER);
+    const [getUser] = useLazyQuery<any, OperationVariables>(LOGIN_USER);
     const [createUser] = useMutation(CREATE_USER);
 
     // Form state

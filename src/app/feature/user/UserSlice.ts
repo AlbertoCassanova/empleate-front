@@ -3,12 +3,16 @@ import type { RootState } from '../../store';
 
 interface UserState {
     firstName: string,
-    lastName: string
+    lastName: string,
+    sexo: string,
+    editado: boolean | null
 };
 
 const initialState: UserState = {
     firstName: "",
-    lastName: ""
+    lastName: "",
+    sexo: "",
+    editado: null
 };
 
 export const userSlice = createSlice({
@@ -18,6 +22,8 @@ export const userSlice = createSlice({
         setUser: (state, action: PayloadAction<any>) => {
             state.firstName = action.payload.nombre;
             state.lastName = action.payload.apellido;
+            state.sexo = action.payload.sexo || "";
+            state.editado = action.payload.editado;
         },
     },
 });

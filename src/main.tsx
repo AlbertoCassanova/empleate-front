@@ -15,9 +15,9 @@ import { Provider } from 'react-redux'
 
 const GOOGLE_MAP_KEY: string = import.meta.env.VITE_GOOGLE_API_KEY || "";
 
-const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
+const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({  
   //uri: "http://94.131.97.245:4000/graphql",
-  uri: "http://localhost:4000/graphql",
+  uri: window.location.host.includes("localhost") ? "http://localhost:4000/graphql" : "http://94.131.97.245:4000/graphql",
   cache: new InMemoryCache()
 });
 

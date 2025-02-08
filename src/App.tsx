@@ -1,5 +1,5 @@
 // React
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 // Redux
@@ -11,10 +11,10 @@ import { OperationVariables, useLazyQuery } from '@apollo/client';
 import { GET_USER_INFO } from './graphql/User.queries';
 
 // Views
-import AuthView from './views/AuthView';
-import HomeView from './views/HomeView';
-import MapView from './views/MapView';
-import ProfileView from './views/ProfileView';
+const AuthView = lazy(() => import('./views/AuthView'));
+const HomeView = lazy(() => import('./views/HomeView'));
+const MapView = lazy(() => import('./views/MapView'));
+const ProfileView = lazy(() => import('./views/ProfileView'));
 
 // Components
 import { ProtectedRoute } from './components/ProtectedRoute';

@@ -13,7 +13,6 @@ import {
     BsSearch
 } from 'react-icons/bs';
 import { CgProfile } from "react-icons/cg";
-//import { AiFillEnvironment } from 'react-icons/ai';
 import { BiWorld } from "react-icons/bi";
 import { FaPowerOff } from "react-icons/fa";
 
@@ -54,9 +53,6 @@ const Menu = () : JSX.Element => {
                 onClick={() => setOpen(!open)}
             />
             <div className="inline-flex items-center">
-                {/*<AiFillEnvironment
-                    className={`bg-amber-300 text-4xl rounded cursor-pointer block float-left mr-2 duration-500 ${open && "rotate-[360deg]"}`}
-                />*/}
                 <img
                     src={`/img/empty_avatar.png`}
                     alt="avatar"
@@ -86,9 +82,8 @@ const Menu = () : JSX.Element => {
             {/* Menu Items */}
             <ul className="pt-2">
                 {MenuItems.map((menu: MenuItemsType, key: number) => (
-                    <>
+                    <div key={key}>
                         <li
-                            key={key}
                             className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-white rounded-md ${menu.spacing ? "mt-9" : "mt-2"}`}
                         >
                             {menu.linkTo ? (
@@ -131,7 +126,7 @@ const Menu = () : JSX.Element => {
                                 ))}
                             </ul>
                         )}
-                    </>
+                    </div>
                 ))}
             </ul>
             <li></li>
