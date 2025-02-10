@@ -5,6 +5,7 @@ import { APIProvider } from '@vis.gl/react-google-maps';
 
 // Apollo 
 import { ApolloClient, ApolloProvider, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
+import createUploadLink from "apollo-upload-client/createUploadLink.mjs";
 
 // Components
 import App from './App.tsx';
@@ -15,9 +16,11 @@ import { Provider } from 'react-redux'
 
 const GOOGLE_MAP_KEY: string = import.meta.env.VITE_GOOGLE_API_KEY || "";
 
-const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({  
+const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({ 
+  link: createUploadLink({
+    uri: window.location.host.includes("localhost") ? "http://localhost:4000/graphql" : "http://94.131.97.245:4000/graphql"
+  }), 
   //uri: "http://94.131.97.245:4000/graphql",
-  uri: window.location.host.includes("localhost") ? "http://localhost:4000/graphql" : "http://94.131.97.245:4000/graphql",
   cache: new InMemoryCache()
 });
 

@@ -5,14 +5,18 @@ interface UserState {
     firstName: string,
     lastName: string,
     sexo: string,
-    editado: boolean | null
+    editado: boolean | null,
+    fotoPerfil: String | null
+    id: number
 };
 
 const initialState: UserState = {
     firstName: "",
     lastName: "",
     sexo: "",
-    editado: null
+    editado: null,
+    fotoPerfil: null,
+    id: 0
 };
 
 export const userSlice = createSlice({
@@ -24,6 +28,8 @@ export const userSlice = createSlice({
             state.lastName = action.payload.apellido;
             state.sexo = action.payload.sexo || "";
             state.editado = action.payload.editado;
+            state.fotoPerfil = action.payload.fotoPerfil || null,
+            state.id = action.payload.id
         },
     },
 });

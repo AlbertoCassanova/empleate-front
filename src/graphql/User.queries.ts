@@ -18,6 +18,8 @@ export const GET_USER_INFO = gql`
             email
             sexo
             editado
+            fotoPerfil
+            id
         }
     }
 `
@@ -39,3 +41,12 @@ export const UPDATE_USER = gql`
         }
     }
 `
+
+export const UPDATE_PROFILE_PHOTO = gql`
+    mutation UpdaetProfilePhoto($token: String, $file: Upload!) {
+        updaetProfilePhoto(token: $token, file: $file) {
+            msg
+            code
+        }
+    }
+`;

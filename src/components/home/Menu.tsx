@@ -21,6 +21,8 @@ import { Logout } from "../../utils/sessions";
 import React from "react";
 import { capitalize } from "../../utils/strings";
 
+const API_ENDPOINT: string = import.meta.env.VITE_API_ENDPOINT || "";
+
 type MenuItemsType = {
     title: string,
     linkTo?: string,
@@ -54,9 +56,10 @@ const Menu = () : JSX.Element => {
             />
             <div className="inline-flex items-center">
                 <img
-                    src={`/img/empty_avatar.png`}
+                    src={`${
+                        user.fotoPerfil != null && user.fotoPerfil ? API_ENDPOINT + "/media/" + user.id  + "/" + user.fotoPerfil  : "/img/empty_avatar.png"}`}
                     alt="avatar"
-                    className={`float-left mr-2 duration-500 ${open ? "w-16" : "w-10"}`}
+                    className={`float-left mr-2 duration-500 rounded-full ${open ? "w-16" : "w-10"}`}
                 />
                 <h1
                     className={`text-white origin-left font-medium text-2xl duration-300 ${!open && "scale-0"}`}

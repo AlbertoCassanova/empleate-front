@@ -1,5 +1,5 @@
 // Redux
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useAppSelector } from "../app/hooks";
 
 // Utils
@@ -11,17 +11,21 @@ import { MdOutlineFileUpload } from "react-icons/md";
 import ModalUI from "../components/ui/ModalUI";
 
 // Apollo
-import { UPDATE_USER } from "../graphql/User.queries";
+import { UPDATE_PROFILE_PHOTO, UPDATE_USER } from "../graphql/User.queries";
 import { useMutation } from "@apollo/client";
+
+const API_ENDPOINT: string = import.meta.env.VITE_API_ENDPOINT || "";
 
 const ProfileView = (): JSX.Element => {
   // UI
+  const fileInputRef : any = useRef();
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [editarPerfil, setEditarPerfil] = useState<boolean>(false);
   const [mensaje, setMensaje] = useState<string>("Por favor complete su perfil");
 
   // Apollo
   const [updateUser] = useMutation(UPDATE_USER);
+  const [uploadFile] = useMutation(UPDATE_PROFILE_PHOTO);
 
   // Redux
   const user = useAppSelector((state) => state.user);
@@ -31,6 +35,7 @@ const ProfileView = (): JSX.Element => {
   const [documento, setDocumento] = useState<string>("");
   const [sexo, setSexo] = useState<string>("");
   const [telefono, setTelefono] = useState<string>("");
+  const [file, setFile] = useState(null);
 
   useEffect(()=> {
     if (user.editado == false) {
@@ -63,18 +68,45 @@ const ProfileView = (): JSX.Element => {
       }
     }
   }
+  const handleChange = async(e : any) =>{
+    const file = e.target.files[0];
+    setFile(file);
+    if (!file) return alert("Selecciona un archivo primero");
+    try {
+      const { data } = await uploadFile({ variables: {token: localStorage.getItem('token'), file: file } });
+      if (data.updaetProfilePhoto[0].code == 200) {
+        window.location.reload();
+      }
+      else {
+        alert("Ha ocurrido un error inesperado");
+      }
+    } catch (error) {
+      console.error("Error subiendo el archivo", error);
+    }
+  }
   return (
     <>
       <div className="py-2 px-4 w-available">
         <div className="md:justify-items-start justify-items-center md:flex block">
           <img
-            src={`/img/empty_avatar.png`}
+            src={`${
+              user.fotoPerfil != null && user.fotoPerfil ? API_ENDPOINT + "/media/" + user.id  + "/" + user.fotoPerfil  : "/img/empty_avatar.png"}`}
             alt="avatar"
-            className="w-32"
+            className="w-30 rounded-full"
+          />
+          <input
+            onChange={handleChange}
+            multiple={false}
+            // @ts-ignore
+            ref={fileInputRef}
+            type='file'
+            hidden
+            accept=".jpg, .jpeg, .png"
           />
           <MdOutlineFileUpload 
+            onClick={() => fileInputRef.current.click()}
             title="Cambiar imagen"
-            className="cursor-pointer absolute -top-[-17vh] text-2xl rounded-full border-[1px] bg-white w-8 h-8 border-dark-purple"
+            className="cursor-pointer absolute -top-[-15vh] text-2xl rounded-full border-[1px] bg-white w-8 h-8 border-dark-purple sm:visible max-md:hidden"
           />
           <div className="self-center pl-2 text-3xl flex">
             {capitalize(user.firstName)} {capitalize(user.lastName)}{" "}
