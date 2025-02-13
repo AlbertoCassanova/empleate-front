@@ -21,3 +21,12 @@ export const CREATE_NEGOCIO = gql`
         }
     }
 `
+
+export const UPDATE_NEGOCIO_LOCATION = gql`
+    mutation UpdateNegocioLocation($longitude: Float, $latitude: Float, $businessId: Int, $token: String) {
+        updateNegocioLocation(longitude: $longitude, latitude: $latitude, businessId: $businessId, token: $token) {
+            code
+            msg
+        }
+    }
+`
