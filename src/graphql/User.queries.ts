@@ -20,6 +20,14 @@ export const GET_USER_INFO = gql`
             editado
             fotoPerfil
             id
+            fechaNacimiento 
+            telefono
+            negocios {
+                cantidad
+                negocio {
+                    nombre
+                }
+            }
         }
     }
 `

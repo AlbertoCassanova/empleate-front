@@ -1,0 +1,507 @@
+{
+    "name": "ROOT",
+    "type": "dir",
+    "fullPath": "",
+    "fileNumber": 49,
+    "lines": 35543,
+    "characters": 1191053,
+    "childrens": [
+        {
+            "name": "dist",
+            "type": "dir",
+            "fullPath": "/dist",
+            "fileNumber": 9,
+            "lines": 34018,
+            "characters": 1137232,
+            "childrens": [
+                {
+                    "name": "assets",
+                    "type": "dir",
+                    "fullPath": "/dist/assets",
+                    "fileNumber": 6,
+                    "lines": 34003,
+                    "characters": 1135305,
+                    "childrens": [
+                        {
+                            "name": "AuthView-jRmLISqd.js",
+                            "type": "file",
+                            "fullPath": "/dist/assets/AuthView-jRmLISqd.js",
+                            "lines": 384,
+                            "characters": 15446
+                        },
+                        {
+                            "name": "HomeView-DffmLH5o.js",
+                            "type": "file",
+                            "fullPath": "/dist/assets/HomeView-DffmLH5o.js",
+                            "lines": 9,
+                            "characters": 214
+                        },
+                        {
+                            "name": "MapView-CqYZgUQq.js",
+                            "type": "file",
+                            "fullPath": "/dist/assets/MapView-CqYZgUQq.js",
+                            "lines": 19,
+                            "characters": 678
+                        },
+                        {
+                            "name": "ProfileView-BmB1s4ph.js",
+                            "type": "file",
+                            "fullPath": "/dist/assets/ProfileView-BmB1s4ph.js",
+                            "lines": 6300,
+                            "characters": 203393
+                        },
+                        {
+                            "name": "index-FVSqy6FJ.js",
+                            "type": "file",
+                            "fullPath": "/dist/assets/index-FVSqy6FJ.js",
+                            "lines": 25624,
+                            "characters": 876915
+                        },
+                        {
+                            "name": "index-zZZunr7F.css",
+                            "type": "file",
+                            "fullPath": "/dist/assets/index-zZZunr7F.css",
+                            "lines": 1667,
+                            "characters": 38659
+                        }
+                    ]
+                },
+                {
+                    "name": "img",
+                    "type": "dir",
+                    "fullPath": "/dist/img",
+                    "fileNumber": 0,
+                    "lines": 0,
+                    "characters": 0,
+                    "childrens": []
+                },
+                {
+                    "name": "index.html",
+                    "type": "file",
+                    "fullPath": "/dist/index.html",
+                    "lines": 14,
+                    "characters": 430
+                },
+                {
+                    "name": "vite.svg",
+                    "type": "file",
+                    "fullPath": "/dist/vite.svg",
+                    "lines": 1,
+                    "characters": 1497
+                }
+            ]
+        },
+        {
+            "name": "public",
+            "type": "dir",
+            "fullPath": "/public",
+            "fileNumber": 2,
+            "lines": 1,
+            "characters": 1497,
+            "childrens": [
+                {
+                    "name": "img",
+                    "type": "dir",
+                    "fullPath": "/public/img",
+                    "fileNumber": 0,
+                    "lines": 0,
+                    "characters": 0,
+                    "childrens": []
+                },
+                {
+                    "name": "vite.svg",
+                    "type": "file",
+                    "fullPath": "/public/vite.svg",
+                    "lines": 1,
+                    "characters": 1497
+                }
+            ]
+        },
+        {
+            "name": "src",
+            "type": "dir",
+            "fullPath": "/src",
+            "fileNumber": 26,
+            "lines": 1251,
+            "characters": 45567,
+            "childrens": [
+                {
+                    "name": "app",
+                    "type": "dir",
+                    "fullPath": "/src/app",
+                    "fileNumber": 4,
+                    "lines": 92,
+                    "characters": 2480,
+                    "childrens": [
+                        {
+                            "name": "feature",
+                            "type": "dir",
+                            "fullPath": "/src/app/feature",
+                            "fileNumber": 2,
+                            "lines": 70,
+                            "characters": 1813,
+                            "childrens": [
+                                {
+                                    "name": "negocios",
+                                    "type": "dir",
+                                    "fullPath": "/src/app/feature/negocios",
+                                    "fileNumber": 1,
+                                    "lines": 31,
+                                    "characters": 771,
+                                    "childrens": [
+                                        {
+                                            "name": "NegocioSlice.ts",
+                                            "type": "file",
+                                            "fullPath": "/src/app/feature/negocios/NegocioSlice.ts",
+                                            "lines": 31,
+                                            "characters": 771
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "user",
+                                    "type": "dir",
+                                    "fullPath": "/src/app/feature/user",
+                                    "fileNumber": 1,
+                                    "lines": 39,
+                                    "characters": 1042,
+                                    "childrens": [
+                                        {
+                                            "name": "UserSlice.ts",
+                                            "type": "file",
+                                            "fullPath": "/src/app/feature/user/UserSlice.ts",
+                                            "lines": 39,
+                                            "characters": 1042
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hooks.ts",
+                            "type": "file",
+                            "fullPath": "/src/app/hooks.ts",
+                            "lines": 5,
+                            "characters": 245
+                        },
+                        {
+                            "name": "store.ts",
+                            "type": "file",
+                            "fullPath": "/src/app/store.ts",
+                            "lines": 17,
+                            "characters": 422
+                        }
+                    ]
+                },
+                {
+                    "name": "components",
+                    "type": "dir",
+                    "fullPath": "/src/components",
+                    "fileNumber": 6,
+                    "lines": 473,
+                    "characters": 19573,
+                    "childrens": [
+                        {
+                            "name": "auth",
+                            "type": "dir",
+                            "fullPath": "/src/components/auth",
+                            "fileNumber": 1,
+                            "lines": 214,
+                            "characters": 10268,
+                            "childrens": [
+                                {
+                                    "name": "LoginForm.tsx",
+                                    "type": "file",
+                                    "fullPath": "/src/components/auth/LoginForm.tsx",
+                                    "lines": 214,
+                                    "characters": 10268
+                                }
+                            ]
+                        },
+                        {
+                            "name": "home",
+                            "type": "dir",
+                            "fullPath": "/src/components/home",
+                            "fileNumber": 3,
+                            "lines": 200,
+                            "characters": 7850,
+                            "childrens": [
+                                {
+                                    "name": "MapContainer.tsx",
+                                    "type": "file",
+                                    "fullPath": "/src/components/home/MapContainer.tsx",
+                                    "lines": 18,
+                                    "characters": 569
+                                },
+                                {
+                                    "name": "Menu.tsx",
+                                    "type": "file",
+                                    "fullPath": "/src/components/home/Menu.tsx",
+                                    "lines": 144,
+                                    "characters": 6229
+                                },
+                                {
+                                    "name": "Navbar.tsx",
+                                    "type": "file",
+                                    "fullPath": "/src/components/home/Navbar.tsx",
+                                    "lines": 38,
+                                    "characters": 1052
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ui",
+                            "type": "dir",
+                            "fullPath": "/src/components/ui",
+                            "fileNumber": 1,
+                            "lines": 43,
+                            "characters": 1007,
+                            "childrens": [
+                                {
+                                    "name": "ModalUI.tsx",
+                                    "type": "file",
+                                    "fullPath": "/src/components/ui/ModalUI.tsx",
+                                    "lines": 43,
+                                    "characters": 1007
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ProtectedRoute.tsx",
+                            "type": "file",
+                            "fullPath": "/src/components/ProtectedRoute.tsx",
+                            "lines": 16,
+                            "characters": 448
+                        }
+                    ]
+                },
+                {
+                    "name": "graphql",
+                    "type": "dir",
+                    "fullPath": "/src/graphql",
+                    "fileNumber": 2,
+                    "lines": 79,
+                    "characters": 1806,
+                    "childrens": [
+                        {
+                            "name": "Negocios.queries.ts",
+                            "type": "file",
+                            "fullPath": "/src/graphql/Negocios.queries.ts",
+                            "lines": 21,
+                            "characters": 460
+                        },
+                        {
+                            "name": "User.queries.ts",
+                            "type": "file",
+                            "fullPath": "/src/graphql/User.queries.ts",
+                            "lines": 58,
+                            "characters": 1346
+                        }
+                    ]
+                },
+                {
+                    "name": "utils",
+                    "type": "dir",
+                    "fullPath": "/src/utils",
+                    "fileNumber": 5,
+                    "lines": 83,
+                    "characters": 2239,
+                    "childrens": [
+                        {
+                            "name": "constants.ts",
+                            "type": "file",
+                            "fullPath": "/src/utils/constants.ts",
+                            "lines": 12,
+                            "characters": 324
+                        },
+                        {
+                            "name": "sessions.ts",
+                            "type": "file",
+                            "fullPath": "/src/utils/sessions.ts",
+                            "lines": 7,
+                            "characters": 151
+                        },
+                        {
+                            "name": "strings.ts",
+                            "type": "file",
+                            "fullPath": "/src/utils/strings.ts",
+                            "lines": 3,
+                            "characters": 125
+                        },
+                        {
+                            "name": "translate.ts",
+                            "type": "file",
+                            "fullPath": "/src/utils/translate.ts",
+                            "lines": 27,
+                            "characters": 694
+                        },
+                        {
+                            "name": "validator.ts",
+                            "type": "file",
+                            "fullPath": "/src/utils/validator.ts",
+                            "lines": 34,
+                            "characters": 945
+                        }
+                    ]
+                },
+                {
+                    "name": "views",
+                    "type": "dir",
+                    "fullPath": "/src/views",
+                    "fileNumber": 6,
+                    "lines": 419,
+                    "characters": 15880,
+                    "childrens": [
+                        {
+                            "name": "AuthView.tsx",
+                            "type": "file",
+                            "fullPath": "/src/views/AuthView.tsx",
+                            "lines": 85,
+                            "characters": 4650
+                        },
+                        {
+                            "name": "BusinessView.tsx",
+                            "type": "file",
+                            "fullPath": "/src/views/BusinessView.tsx",
+                            "lines": 116,
+                            "characters": 4225
+                        },
+                        {
+                            "name": "ConfigView.tsx",
+                            "type": "file",
+                            "fullPath": "/src/views/ConfigView.tsx",
+                            "lines": 190,
+                            "characters": 6590
+                        },
+                        {
+                            "name": "HomeView.tsx",
+                            "type": "file",
+                            "fullPath": "/src/views/HomeView.tsx",
+                            "lines": 10,
+                            "characters": 146
+                        },
+                        {
+                            "name": "MapView.tsx",
+                            "type": "file",
+                            "fullPath": "/src/views/MapView.tsx",
+                            "lines": 11,
+                            "characters": 170
+                        },
+                        {
+                            "name": "ProfileVIew.tsx",
+                            "type": "file",
+                            "fullPath": "/src/views/ProfileVIew.tsx",
+                            "lines": 7,
+                            "characters": 99
+                        }
+                    ]
+                },
+                {
+                    "name": "App.tsx",
+                    "type": "file",
+                    "fullPath": "/src/App.tsx",
+                    "lines": 65,
+                    "characters": 2371
+                },
+                {
+                    "name": "main.tsx",
+                    "type": "file",
+                    "fullPath": "/src/main.tsx",
+                    "lines": 38,
+                    "characters": 1180
+                },
+                {
+                    "name": "vite-env.d.ts",
+                    "type": "file",
+                    "fullPath": "/src/vite-env.d.ts",
+                    "lines": 2,
+                    "characters": 38
+                }
+            ]
+        },
+        {
+            "name": ".env",
+            "type": "file",
+            "fullPath": "/.env",
+            "lines": 6,
+            "characters": 225
+        },
+        {
+            "name": ".env.example",
+            "type": "file",
+            "fullPath": "/.env.example",
+            "lines": 4,
+            "characters": 64
+        },
+        {
+            "name": ".gitignore",
+            "type": "file",
+            "fullPath": "/.gitignore",
+            "lines": 26,
+            "characters": 258
+        },
+        {
+            "name": "README.md",
+            "type": "file",
+            "fullPath": "/README.md",
+            "lines": 51,
+            "characters": 1607
+        },
+        {
+            "name": "count.config.js",
+            "type": "file",
+            "fullPath": "/count.config.js",
+            "lines": 27,
+            "characters": 1111
+        },
+        {
+            "name": "eslint.config.js",
+            "type": "file",
+            "fullPath": "/eslint.config.js",
+            "lines": 29,
+            "characters": 734
+        },
+        {
+            "name": "index.css",
+            "type": "file",
+            "fullPath": "/index.css",
+            "lines": 37,
+            "characters": 690
+        },
+        {
+            "name": "index.html",
+            "type": "file",
+            "fullPath": "/index.html",
+            "lines": 14,
+            "characters": 377
+        },
+        {
+            "name": "tsconfig.app.json",
+            "type": "file",
+            "fullPath": "/tsconfig.app.json",
+            "lines": 27,
+            "characters": 665
+        },
+        {
+            "name": "tsconfig.json",
+            "type": "file",
+            "fullPath": "/tsconfig.json",
+            "lines": 8,
+            "characters": 119
+        },
+        {
+            "name": "tsconfig.node.json",
+            "type": "file",
+            "fullPath": "/tsconfig.node.json",
+            "lines": 25,
+            "characters": 593
+        },
+        {
+            "name": "vite.config.ts",
+            "type": "file",
+            "fullPath": "/vite.config.ts",
+            "lines": 19,
+            "characters": 314
+        }
+    ]
+}

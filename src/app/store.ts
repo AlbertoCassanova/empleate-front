@@ -3,10 +3,12 @@ import { configureStore } from '@reduxjs/toolkit';
 
 // Reducers
 import userReducer from "./feature/user/UserSlice";
+import negociosReducer from "./feature/negocios/NegocioSlice"
 
 const store = configureStore({
   reducer: {
-    user: userReducer
+    user: userReducer,
+    negocios: negociosReducer
   },
 });
 

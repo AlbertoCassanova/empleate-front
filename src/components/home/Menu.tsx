@@ -14,7 +14,8 @@ import {
 } from 'react-icons/bs';
 import { CgProfile } from "react-icons/cg";
 import { BiWorld } from "react-icons/bi";
-import { FaPowerOff } from "react-icons/fa";
+import { IoIosHome } from "react-icons/io";
+import { FaPowerOff, FaStore, FaCog } from "react-icons/fa";
 
 // Utils
 import { Logout } from "../../utils/sessions";
@@ -38,9 +39,12 @@ type MenuItemsType = {
 }
 
 const MenuItems : Array<MenuItemsType> = [
+    { title : "Inicio", icon: IoIosHome, linkTo: "/home"},
+    { title : "Mi Negocio", icon: FaStore, linkTo: "/business" },
     { title : "Mapa", icon: BiWorld, linkTo: "/map" },
     { title : "Perfil", icon: CgProfile, linkTo: "/profile"},
-    { title : "Cerrar sesión", icon: FaPowerOff, functionOnClick: Logout}
+    { title : "Configuración", icon: FaCog, linkTo: "/config"},
+    { title : "Cerrar sesión", icon: FaPowerOff, functionOnClick: Logout},
 ];
 
 const Menu = () : JSX.Element => {

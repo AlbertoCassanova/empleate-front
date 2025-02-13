@@ -7,7 +7,7 @@ import { CgProfile } from "react-icons/cg";
 import { BiWorld } from "react-icons/bi";
 import { IconType } from "react-icons";
 import { FaHome } from "react-icons/fa";
-
+import { FaCog } from "react-icons/fa";
 
 type NavbarItemsType = {
     icon: IconType,
@@ -18,6 +18,7 @@ const NavbarItems : Array<NavbarItemsType> = [
     { icon: FaHome, linkTo: "/home" },
     { icon: BiWorld, linkTo: "/map" },
     { icon: CgProfile, linkTo: "/profile"},
+    { icon: FaCog, linkTo: "/config"},
 ]
 
 const Navbar = () : JSX.Element => {

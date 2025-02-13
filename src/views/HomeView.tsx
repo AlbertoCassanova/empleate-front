@@ -1,8 +1,10 @@
+import CreatePost from "../components/home/CreatePost";
 
 const HomeView = (): JSX.Element => {
-    document.title = "Empleate";
+    document.title = "Inicio";
     return (
-        <div>
+        <div className="p-2">
+            <CreatePost />
         </div>
     )
 }

@@ -7,7 +7,9 @@ interface UserState {
     sexo: string,
     editado: boolean | null,
     fotoPerfil: String | null
-    id: number
+    id: number,
+    fechaNacimiento: string,
+    telefono: string
 };
 
 const initialState: UserState = {
@@ -16,7 +18,9 @@ const initialState: UserState = {
     sexo: "",
     editado: null,
     fotoPerfil: null,
-    id: 0
+    id: 0,
+    fechaNacimiento: "",
+    telefono: ""
 };
 
 export const userSlice = createSlice({
@@ -29,7 +33,9 @@ export const userSlice = createSlice({
             state.sexo = action.payload.sexo || "";
             state.editado = action.payload.editado;
             state.fotoPerfil = action.payload.fotoPerfil || null,
-            state.id = action.payload.id
+            state.id = action.payload.id,
+            state.fechaNacimiento = action.payload.fechaNacimiento,
+            state.telefono = action.payload.telefono
         },
     },
 });

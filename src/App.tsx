@@ -12,9 +12,11 @@ import { GET_USER_INFO } from './graphql/User.queries';
 
 // Views
 const AuthView = lazy(() => import('./views/AuthView'));
+const BusinessView = lazy(() => import('./views/BusinessView'));
+const ConfigView = lazy(() => import('./views/ConfigView'));
 const HomeView = lazy(() => import('./views/HomeView'));
 const MapView = lazy(() => import('./views/MapView'));
-const ProfileView = lazy(() => import('./views/ProfileView'));
+const ProfileVIew = lazy(() => import('./views/ProfileVIew'));
 
 // Components
 import { ProtectedRoute } from './components/ProtectedRoute';
@@ -47,8 +49,10 @@ function App(): JSX.Element {
           </Route>
           <Route element={<ProtectedRoute isAllowed={localStorage.getItem('token')} />}>
             <Route path="/home" element={<HomeView />} />
-            <Route path="/map" element={<MapView />} />
-            <Route path="/profile" element={<ProfileView />} />
+            <Route path="/map/:option?/:id?" element={<MapView />} />
+            <Route path="/business" element={<BusinessView />} />
+            <Route path="/profile" element={<ProfileVIew />} />
+            <Route path="/config" element={<ConfigView />} />
             <Route path="/*" element={<Navigate to={'/home'} replace />} />
           </Route>
         </Routes>

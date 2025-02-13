@@ -13,10 +13,12 @@ import ModalUI from "../components/ui/ModalUI";
 // Apollo
 import { UPDATE_PROFILE_PHOTO, UPDATE_USER } from "../graphql/User.queries";
 import { useMutation } from "@apollo/client";
+import { PHONE_CODE } from "../utils/constants";
 
 const API_ENDPOINT: string = import.meta.env.VITE_API_ENDPOINT || "";
 
-const ProfileView = (): JSX.Element => {
+const ConfigView = (): JSX.Element => {
+  document.title = "Configuración";
   // UI
   const fileInputRef : any = useRef();
   const [openModal, setOpenModal] = useState<boolean>(false);
@@ -35,6 +37,7 @@ const ProfileView = (): JSX.Element => {
   const [documento, setDocumento] = useState<string>("");
   const [sexo, setSexo] = useState<string>("");
   const [telefono, setTelefono] = useState<string>("");
+  // @ts-ignore
   const [file, setFile] = useState(null);
 
   useEffect(()=> {
@@ -121,7 +124,7 @@ const ProfileView = (): JSX.Element => {
           </div>
         </div>
         <div>
-          {editarPerfil && (
+          {editarPerfil == true ? (
             <div>
               <div>
                 <span>Fecha de nacimiento</span>
@@ -155,7 +158,7 @@ const ProfileView = (): JSX.Element => {
               <div className="flex">
                 <span>Teléfono</span>
                 <div className="ml-1">
-                  <span className="p-[1px] rounded-l-md bg-gray-100 border-l-[1px] border-y-[1px] border-gray-400 border-r-0">+51</span>
+                  <span className="p-[1px] rounded-l-md bg-gray-100 border-l-[1px] border-y-[1px] border-gray-400 border-r-0">{PHONE_CODE()}</span>
                   <input
                     onChange={(e) => setTelefono(e.target.value)}
                     type="number"
@@ -173,6 +176,16 @@ const ProfileView = (): JSX.Element => {
                 </button>
               </div>
             </div>
+          ) : (
+            <div className="pt-2">
+              <div>
+                <h2>Información de tu perfil</h2>
+              </div>
+              <div className="flex flex-col">
+                <span>Fecha de nacimiento: {user.fechaNacimiento}</span>
+                <span>Teléfono: {user.telefono}</span>
+              </div>
+            </div>
           )}
         </div>
       </div>
@@ -185,4 +198,4 @@ const ProfileView = (): JSX.Element => {
   )
 }
 
-export default ProfileView;
+export default ConfigView;
