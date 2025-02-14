@@ -30,7 +30,7 @@ function App(): JSX.Element {
 
   const queryUserLogged = async() : Promise<void> => {
     const queryGetUserInfo = await getUserInfo({ variables: { token: localStorage.getItem('token') } })
-    dispatch(setUser(queryGetUserInfo.data.getUserInfo[0]))
+    dispatch(setUser(queryGetUserInfo.data.getUserInfo))
   }
 
   useEffect(() => {
